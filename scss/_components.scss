@@ -1,0 +1,75 @@
+@use "base" as *;
+
+
+/* UTILITIES */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Text-align classes
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* TEXT SCALES */
+
+.main-name {
+  @include textStyles();
+  font-family: $font-redhat-display;
+  font-size: 3rem;
+  font-weight: 700;
+  color: $color-white;
+}
+
+.sub-name {
+  @include textStyles;
+  font-family: $font-redhat-display;
+  font-size: 1.5rem;
+  color: $color-white;
+}
+
+.main-heading {
+  font-family: $font-redhat-display;
+  font-size: 5rem;
+  font-weight: 300;
+  color: $color-white;
+  margin-bottom: 2rem;
+}
+
+.sub-heading {
+  font-family: $font-redhat-display;
+  font-size: 4rem;
+  font-weight: 300;
+  color: $color-light;
+  margin-bottom: 5rem;
+}
+
+.main-button {
+  width: 170px;
+  height: 45px;
+  font-family: $font-redhat-display;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $color-white;
+  outline: none;
+  cursor: pointer;
+  transition: all .4s;
+  &:hover {
+    background-color: $color-light;
+    color: $color-darkest;
+  }
+}
