@@ -9,6 +9,9 @@
   padding: 0 20px;
 }
 
+// PADDING
+
+
 // Text-align classes
 .text-center {
   text-align: center;
@@ -22,9 +25,17 @@
   text-align: right;
 }
 
-/* TEXT SCALES */
+/* BRAND TEXT */
 
-.main-name {
+.brand-link {
+  text-decoration: none;
+  font-family: $font-redhat-display;
+  color: $color-white;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.brand-title {
   @include textStyles();
   font-family: $font-redhat-display;
   font-size: 3rem;
@@ -32,12 +43,14 @@
   color: $color-white;
 }
 
-.sub-name {
+.brand-subtitle {
   @include textStyles;
   font-family: $font-redhat-display;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: $color-white;
 }
+
+/* MAIN TEXT */
 
 .main-heading {
   font-family: $font-redhat-display;
@@ -54,6 +67,41 @@
   color: $color-light;
   margin-bottom: .5rem;
 }
+
+.header-subheader {
+  font-family: $font-redhat-display;
+  font-size: 2rem;
+  font-weight: 500;
+  color: $color-light;
+  margin-bottom: 1rem;
+}
+
+.title_sm {
+  font-family: $font-redhat-display;
+  font-size: 2rem;
+  font-weight: 200;
+  color: $color-light;
+  margin-bottom: .2rem;
+}
+
+.body-text_md {
+  font-family: $font-redhat-display;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $color-white;
+  margin-bottom: .2rem;
+}
+
+.body-text_xl {
+  font-family: $font-redhat-display;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: $color-white;
+  margin-bottom: .2rem;
+}
+
+/* BUTTONS */
 
 .main-button {
   width: 170px;
@@ -84,31 +132,31 @@
   &:hover .card-overlay {
     left: 0;
     transition: all 0.7s;
+    backdrop-filter: blur(2px);
+
   }
   .card-overlay {
     position: absolute;
     top: 0;
     left: -100%;
+    padding: 4rem;
     @extend %fullSpace;
-    background-color: transparentize($color-primary, 0.5);
+    background-color: transparentize($color-darkest, .8);
     color: $color-white;
     z-index: 10;
     @include flexlayout();
     flex-direction: column;
+    align-items: start;
     .card-overlay-heading {
       font-family: $font-redhat-display;
-      font-size: 50px;
+      font-size: 1.6rem;
       text-align: center;
-      @include textStyles(lowercase);
-    }
-    .card-overlay-heading:first-letter {
-      @include textStyles();
+      font-weight: 500;
     }
     .card-overlay-paragraph {
       font-family: $font-redhat-display;
-      font-size: 30px;
-      margin-bottom: 30px;
-      @include textStyles(capitalize);
+      font-size: .9rem;
+      margin-bottom: 1rem;
     }
     .card-overlay-button {
       width: 150px;
@@ -119,10 +167,16 @@
       font-size: 14px;
       font-weight: bold;
       letter-spacing: 1px;
-      border: 1px solid $color-primary;
-      border-radius: 30px;
+      border: 1px solid $color-light;
+      border-radius: 2px;
       outline: none;
       cursor: pointer;
+      transition: all 0.7s;
+      &:hover{
+        color: $color-light;
+        background-color: transparentize($color-darkest, .5);
+        border: 1px solid $color-white;
+      }
     }
   }
   .card-image {
