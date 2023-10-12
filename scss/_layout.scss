@@ -2,51 +2,15 @@
 
 /* ALGEMENE LAYOUT */
 
-/* NAVBAR */
-
-.navbar {
-  height: 72px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .navbar-brand {
-
-    .navbar-logo {
-      max-width: 60px;
-      object-fit: contain;
-    }
-  }
-  .navbar-links {
-    .navbar-list {
-      .navbar-listitem {
-        list-style-type: none;
-        color: $color-primary;
-        display: inline;
-        .navbar-link {
-          text-decoration: none;
-          color: $color-white;
-          font-family: $font-redhat-display;
-          font-weight: 400;
-          font-size: .95rem;
-          margin-left: 1.25rem;
-        }
-      }
-    }
-  }
-}
-
 /* HEADER */
 
 
 /* TOP */
 
-.header {
+.hero {
+  padding-top: 72px;
   width: 100%;
-  height: 55vh;
+  height: 66.66vh;
   background: linear-gradient(rgba($color-darkest, .75), rgba($color-darkest, .4)), url("../assets/bg_1.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -54,11 +18,11 @@
   position: relative;
 
   .brand {
-    @include positionFromTop(20%);
+    @include positionFromTop(40%);
     @include flexlayout();
   }
-  .header-banner {
-    @include positionFromTop(60%);
+  .hero-banner {
+    @include positionFromTop(75%);
     text-align: center;
   }
 }
@@ -117,12 +81,12 @@
       display: flex;
       width: 300px;
       justify-content: space-between;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       .social-media-item {
         list-style-type: none;
         .social-media-link {
           text-decoration: none;
-          font-size: 2rem;
+          font-size: 1.5rem;
           color: $color-white;
           &:hover {
             color: $color-light;
