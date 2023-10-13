@@ -46,6 +46,16 @@ $screen-xxl: 1400px;
 
 .bg-transparant {background-color: rgba(255,255,255,0.05);}
 
+.txt-white {color: $color-white;}
+.txt-light {color: $color-light;}
+
+.txt-primary {color: $color-primary;}
+.txt-secondary {color: $color-secondary;}
+
+
+.txt-darkest {color: $color-darkest;}
+.txt-black {color: $color-black;}
+
 /* BASE FONTS - TYPESET */
 $font-redhat-display: 'Red Hat Display', sans-serif;
 

@@ -12,54 +12,100 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-darkest">
 
-<div class="container-fluid">
-  <nav class="navbar bg-darkest">
-    <!-- <div class="navbar-brand"><img class="navbar-logo" src="assets/favicon.png" alt="Logo Placeholder"></div> -->
-    <div class="navbar-brand"><a class="brand-link" href="#">AURO</a></div>
-    <div class="navbar-links">
-      <ul class="navbar-list">
-        <li class="navbar-listitem"><a href="#" class="navbar-link">Products</a></li>
-        <li class="navbar-listitem"><a href="#" class="navbar-link">Cart</a></li>
-        <li class="navbar-listitem"><a href="#" class="navbar-link">Login</a></li>
-      </ul>
-    </div>
-  </nav>
-</div>
-
-<!--
-<header class="products-head">
-  <h2 class="products-title"></h2>
-  <h4 class="products-subtitle"></h4>
-</header>
-
-<footer class="footer bg-darkest">
-  <div class="footer-header">
-    <div>
-      <h1 class="brand-title">AURO</h1>
-      <p class="brand-subtitle">Auditive Future.</p>
-    </div>
-  </div>
-  <div class="footer-social-media">
-    <ul class="social-media">
-      <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-facebook-square"></i></a></li>
-      <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-instagram"></i></a></li>
-      <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-youtube"></i></a></li>
-      <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-snapchat"></i></a></li>
+<nav class="navbar container-fluid">
+  <div class="navbar-brand"><a class="brand-link" href="index.html">AURO</a></div>
+  <div class="navbar-links">
+    <ul class="navbar-list">
+      <li class="navbar-listitem"><a href="products.html" class="navbar-link">Products</a></li>
+      <li class="navbar-listitem"><a href="#" class="navbar-link">Cart</a></li>
+      <li class="navbar-listitem"><a href="login.html" class="navbar-link">Login</a></li>
     </ul>
   </div>
-  <div class="footer-copyright">
-    <p class="footer-copyright-paragraph">&copy; AURO // All rights reserved.</p>
-  </div>
-</footer>
--->
+</nav>
 
-<div class="filter-wrapper">
-  <div class="filter-card">
-    <img src="" alt="" class="filter-icon">
-    <a href="#">Product name.</a>
-  </div>
+<section class="gallery_header bg-darkest mt-xl">
+  <p class="txt-body_md">Head into the future. Wear Auro.<br></p>
+  <h3 class="txt-title_sm">Discover our products:</h3>
+</section>
+<!-- CONTAINER MET FILTERMENU EN PRODUCT-OVERZICHT // PAGINATIE -->
+
+<div class="container-fluid products-wrapper bg-darkest mx-auto">
+  <aside class="filter-menu">
+    <h2 class="filter-title">Filter</h2>
+    <ul class="filter-list">
+      <li class="filter-listitem"><a class="filter-toggle" href="#">All</a></li>
+      <li class="filter-listitem"><a class="filter-toggle" href="#">Auropods</a></li>
+      <li class="filter-listitem"><a class="filter-toggle" href="#">AuroVision</a></li>
+      <li class="filter-listitem"><a class="filter-toggle" href="#">AuroTouch</a></li>
+      <li class="filter-listitem"><a class="filter-toggle" href="#">AuroLink</a></li>
+    </ul>
+  </aside>
+  <main class="product-list">
+    <!-- Voeg meer productkaarten toe -->
+    <div class="product-card">
+      <img src="assets/images/gallery_3.png" alt="Product 1">
+      <div class="card-info">
+        <h3 class="product-name" >Auro Nova</h3>
+        <p class="product-price">€249</p>
+        <a href="assets/images/gallery_3.png" class="details-button">Details</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/images/gallery_3.png" alt="Product 1">
+      <div class="card-info">
+        <h3 class="product-name" >Auro Nova</h3>
+        <p class="product-price">€249</p>
+        <a href="assets/images/gallery_3.png" class="details-button">Details</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/images/gallery_3.png" alt="Product 1">
+      <div class="card-info">
+        <h3 class="product-name" >Auro Nova</h3>
+        <p class="product-price">€249</p>
+        <a href="assets/images/gallery_3.png" class="details-button">Details</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/images/gallery_3.png" alt="Product 1">
+      <div class="card-info">
+        <h3 class="product-name" >Auro Nova</h3>
+        <p class="product-price">€249</p>
+        <a href="assets/images/gallery_3.png" class="details-button">Details</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/images/gallery_3.png" alt="Product 1">
+      <div class="card-info">
+        <h3 class="product-name" >Auro Nova</h3>
+        <p class="product-price">€249</p>
+        <a href="assets/images/gallery_3.png" class="details-button">Details</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/images/gallery_3.png" alt="Product 1">
+      <div class="card-info">
+        <h3 class="product-name" >Auro Nova</h3>
+        <p class="product-price">€249</p>
+        <a href="assets/images/gallery_3.png" class="details-button">Details</a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<div class="pagination">
+  <a href="#" class="pagination-item">1</a>
+  <a href="#" class="pagination-item active">2</a>
+  <a href="#" class="pagination-item">3</a>
+  <!-- Voeg meer paginatie-items toe -->
 </div>
 
 </body>

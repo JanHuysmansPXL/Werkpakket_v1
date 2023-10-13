@@ -31,7 +31,7 @@
 /* GALLERY */
 
 .gallery_header {
-  padding: 2rem;
+  padding: $padding-md;
 }
 
 .gallery {
@@ -39,7 +39,7 @@
     display: flex;
     flex-wrap: wrap;
     background-color: $color-darkest;
-    padding: 2rem;
+    padding: $padding-md;
     .card {
       width: 25%;
       aspect-ratio: 1 / 1;

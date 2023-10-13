@@ -1,0 +1,147 @@
+@use "base" as *;
+
+.products-wrapper {
+  display: flex;
+  height: 95vh;
+  padding: $padding-md;
+  overflow: hidden; // Voeg een overflow-hidden toe om de scrollende inhoud binnen de container te houden
+}
+
+// Filtermenu
+.filter-menu {
+  width: 20%;
+  padding: $padding-md;
+  background-color: $color-light;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  height: 100vh; // Volledige hoogte voor het filtermenu
+  overflow-y: auto; // Voeg een overflow-y toe om de scrollbaarheid binnen het filtermenu in te schakelen
+
+  .filter-title {
+    font-family: $font-redhat-display;
+    font-size: $fs-md;
+    font-weight: 500;
+    color: $color-dark;
+    margin-bottom: $margin-lg;
+  }
+  .product-name {
+    font-family: $font-redhat-display;
+    font-size: $fs-sm;
+    font-weight: 400;
+    color: $color-dark;
+  }
+  .filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .filter-listitem {
+      font-family: $font-redhat-display;
+      font-size: $fs-sm;
+      font-weight: 400;
+      margin-bottom: $margin-md;
+      .filter-toggle {
+        text-decoration: none;
+        color: $color-dark;
+        &:hover {
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+// Productkaarten
+
+
+/* .product-list {
+  width: 85%; // Verminder de breedte van productlijst
+  padding-left: $padding-sm;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow-y: auto; // Voeg een overflow-y toe om de productlijst scrollbaar te maken
+*/
+
+.product-list {
+  width: 80%;
+  padding-left: $padding-sm;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  overflow-y: auto;
+
+  .product-card {
+    background-color: rgba($color-darkest, 0.9);
+    border: 1px solid rgba($color-light, 0.1);
+    border-radius: 2px;
+    text-align: start;
+    flex: 0 0 calc(33.3333% - 8px);
+
+    img {
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .card-info {
+      padding-left: $padding-sm;
+      .product-name {
+        font-family: $font-redhat-display;
+        font-size: $fs-md;
+        font-weight: 600;
+        color: $color-light;
+        margin-bottom: $margin-sm;
+      }
+
+      .product-price {
+        font-family: $font-redhat-display;
+        font-size: $fs-sm;
+        font-weight: 500;
+        color: $color-light;
+        margin-bottom: $margin-xs;
+      }
+
+      .details-button {
+        margin-top: $margin-xs;
+        margin-bottom: $margin-xs;
+        padding: $padding-sm $padding-md;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+          background-color: $color-light;
+          color: $color-darkest;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: $padding-md;
+  position: sticky;
+  bottom: 0; // Blijft aan de onderkant
+
+  .pagination-item {
+    margin: 0 5px;
+    padding: 8px 16px;
+    background-color: $color-light;
+    color: $color-dark;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+}

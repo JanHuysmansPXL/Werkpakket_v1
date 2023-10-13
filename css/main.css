@@ -37,6 +37,30 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+.txt-white {
+  color: #FFFFFF;
+}
+
+.txt-light {
+  color: #f3f3f3;
+}
+
+.txt-primary {
+  color: #333;
+}
+
+.txt-secondary {
+  color: #666;
+}
+
+.txt-darkest {
+  color: #0a0a0a;
+}
+
+.txt-black {
+  color: #000000;
+}
+
 /* BASE FONTS - TYPESET */
 /* MARGIN / PADDING - UTILITY CLASSES*/
 .mx-auto {
@@ -828,6 +852,137 @@
 .login-form .form-link:hover {
   font-style: italic;
   border-bottom: 1px solid #f3f3f3;
+}
+
+.products-wrapper {
+  display: flex;
+  height: 95vh;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.filter-menu {
+  width: 20%;
+  padding: 2rem;
+  background-color: #f3f3f3;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+.filter-menu .filter-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 500;
+  color: #363636;
+  margin-bottom: 3rem;
+}
+.filter-menu .product-name {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #363636;
+}
+.filter-menu .filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.filter-menu .filter-list .filter-listitem {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.filter-menu .filter-list .filter-listitem .filter-toggle {
+  text-decoration: none;
+  color: #363636;
+}
+.filter-menu .filter-list .filter-listitem .filter-toggle:hover {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* .product-list {
+  width: 85%; // Verminder de breedte van productlijst
+  padding-left: $padding-sm;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow-y: auto; // Voeg een overflow-y toe om de productlijst scrollbaar te maken
+*/
+.product-list {
+  width: 80%;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  overflow-y: auto;
+}
+.product-list .product-card {
+  background-color: rgba(10, 10, 10, 0.9);
+  border: 1px solid rgba(243, 243, 243, 0.1);
+  border-radius: 2px;
+  text-align: start;
+  flex: 0 0 calc(33.3333% - 8px);
+}
+.product-list .product-card img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.product-list .product-card .card-info {
+  padding-left: 1rem;
+}
+.product-list .product-card .card-info .product-name {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 600;
+  color: #f3f3f3;
+  margin-bottom: 1rem;
+}
+.product-list .product-card .card-info .product-price {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f3f3f3;
+  margin-bottom: 0.5rem;
+}
+.product-list .product-card .card-info .details-button {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem 2rem;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+.product-list .product-card .card-info .details-button:hover {
+  background-color: #f3f3f3;
+  color: #0a0a0a;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  position: sticky;
+  bottom: 0;
+}
+.pagination .pagination-item {
+  margin: 0 5px;
+  padding: 8px 16px;
+  background-color: #f3f3f3;
+  color: #363636;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.pagination .pagination-item:hover {
+  background-color: #555;
 }
 
 /*# sourceMappingURL=main.css.map */
