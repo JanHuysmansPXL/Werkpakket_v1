@@ -81,11 +81,7 @@
   z-index: 1000;
   backdrop-filter: blur(.5rem);
   background: linear-gradient(rgba($color-light, .01), rgba($color-light,.01));
-
-
-
   .navbar-brand {
-
     .navbar-logo {
       max-width: 60px;
       object-fit: contain;
@@ -242,7 +238,6 @@
   outline: none;
   cursor: pointer;
   transition: all .4s;
-
   &:hover {
     background-color: $color-light;
     color: $color-darkest;
