@@ -1,0 +1,161 @@
+@use "base" as *;
+
+.product-detail-page {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+/* Linker kolom met productinformatie */
+.product-info {
+  height: 100%;
+  width: 60%;
+  overflow-y: auto;
+  background-color: $color-darkest;
+  color: $color-light;
+  font-family: $font-redhat-display;
+  padding: 0 $padding-md;
+
+  .info-heading {
+    font-family: $font-redhat-display;
+    font-size: $fs-lg;
+    font-weight: 500;
+    color: $color-light;
+  }
+
+  .info-subheading {
+    font-family: $font-redhat-display;
+    font-size: $fs-md;
+    font-weight: 300;
+    color: $color-light;
+  }
+
+  .product-info-list {
+    text-decoration: none;
+  }
+
+  .infotxt_lg {
+    font-family: $font-redhat-display;
+    font-size: $fs-lg;
+    font-weight: 700;
+    color: $color-light;
+    margin-bottom: $margin-xs;
+    list-style-type: none;
+  }
+  .fa-star {
+    color: #ea68a9;
+    font-size: 1rem;
+    margin-right: 1px;
+    border: none;
+  }
+}
+
+
+
+/* Rechterkolom met productafbeelding en overlay */
+.product-image {
+  width: 40%;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 1rem 0px 1rem;
+  background-color: transparentize($color-light, .2);
+  backdrop-filter: blur(2rem);
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: start;
+  padding: $padding-md;
+  overflow: scroll;
+    .overlaytxt_sm {
+      font-family: $font-redhat-display;
+      font-size: $fs-md;
+      font-weight: 400;
+      color: $color-dark;
+      margin-bottom: $margin-md;
+  }
+}
+
+.toggle-overlay {
+  position: absolute;
+  color: rgba($color-light, 0.75);
+  top: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  font-size: $fs-md;
+  cursor: pointer;
+}
+
+/* Toon overlay wanneer de link wordt aangeklikt */
+.toggle-overlay:focus + .image-overlay {
+  display: flex;
+}
+
+/* Stijlen voor scrollbare productinformatie */
+.product-info {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+/* Stijlen voor de CTA-knop (Call to Action) */
+.cart-button {
+  display: inline-block;
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-darkest;
+  background-color: $color-light;
+  border: 1px solid $color-light;
+  padding: $padding-xs $padding-sm;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.7s;
+  &:hover {
+    color: $color-light;
+    background-color: transparentize($color-darkest, .5);
+    border: 1px solid $color-light;
+  }
+}
+
+.tech-specs {
+  margin-top: $margin-lg;
+  /* LINE */
+  .line {
+    width: 100%;
+    height: 1px;
+    background: $color-dark;
+  }
+  .specs-wrapper {
+    @include flexlayout();
+    justify-content: space-between;
+    .specs-left, .specs-right {
+      width: 50%;
+    }
+
+    .product-info-list i {
+      width: 40px;
+      margin-right: 2rem;
+      color: #ea68a9;
+    }
+  }
+}
+
+/* Voeg meer stijlen en opmaak toe voor de productinformatie en andere details. */

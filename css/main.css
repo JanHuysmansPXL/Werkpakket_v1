@@ -14,7 +14,7 @@
 }
 
 .bg-light {
-  background-color: #f3f3f3;
+  background-color: rgb(243, 243, 243);
 }
 
 .bg-primary {
@@ -42,7 +42,7 @@
 }
 
 .txt-light {
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
 }
 
 .txt-primary {
@@ -324,19 +324,41 @@
   color: #333;
   display: inline;
 }
+.navbar .navbar-links .navbar-list .navbar-listitem .login-button {
+  text-decoration: none;
+  color: #0a0a0a;
+  background-color: rgb(243, 243, 243);
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid #0a0a0a;
+  border-radius: 999px;
+  transition: all 0.5s;
+  padding: 6px 12px;
+  margin-left: 2rem;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .login-button:hover {
+  font-weight: 500;
+  background-color: #0a0a0a;
+  color: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .login-button .fa-user-circle {
+  margin-right: 0.5rem;
+}
 .navbar .navbar-links .navbar-list .navbar-listitem .navbar-link {
   text-decoration: none;
   color: #FFFFFF;
   font-family: "Red Hat Display", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.95rem;
   margin-left: 1.25rem;
   padding-bottom: 6px;
-  transition: ease 0.7s;
+  transition: all 0.5s;
 }
 .navbar .navbar-links .navbar-list .navbar-listitem .navbar-link:hover {
-  font-weight: 600;
-  border-bottom: 2px solid #f3f3f3;
+  font-weight: 500;
+  border-bottom: 2px solid rgb(243, 243, 243);
 }
 
 /* BRAND TEXT */
@@ -382,7 +404,7 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 4.236rem;
   font-weight: 500;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   margin-bottom: 0.25rem;
 }
 
@@ -390,7 +412,7 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 2.618rem;
   font-weight: 300;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   margin-bottom: 0.5rem;
 }
 
@@ -398,7 +420,7 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.618rem;
   font-weight: 300;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   margin-bottom: 0.5rem;
 }
 
@@ -406,7 +428,7 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.618rem;
   font-weight: 500;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   margin-bottom: 1rem;
 }
 
@@ -414,7 +436,7 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.618rem;
   font-weight: 200;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   margin-bottom: 0.2rem;
 }
 
@@ -426,6 +448,14 @@
   margin-bottom: 0.2rem;
 }
 
+.txt-body_lg {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 0.2rem;
+}
+
 .txt_body_xl {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.618rem;
@@ -433,6 +463,24 @@
   letter-spacing: 1px;
   color: #FFFFFF;
   margin-bottom: 0.2rem;
+}
+
+.infotxt_sm {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-bottom: 0.7rem;
+  list-style-type: none;
+}
+
+.infotxt_strong {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 0.7rem;
+  list-style-type: none;
 }
 
 /* BUTTONS */
@@ -451,7 +499,7 @@
   transition: all 0.4s;
 }
 .main-button:hover {
-  background-color: #f3f3f3;
+  background-color: rgb(243, 243, 243);
   color: #0a0a0a;
 }
 
@@ -471,7 +519,7 @@
   transition: all 0.4s;
 }
 .cta-button:hover {
-  background-color: #f3f3f3;
+  background-color: rgb(243, 243, 243);
   color: #0a0a0a;
 }
 
@@ -481,9 +529,9 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #f3f3f3;
+  border: 1px solid rgb(243, 243, 243);
   outline: none;
   cursor: pointer;
   padding: 10px 30px;
@@ -494,7 +542,7 @@
 }
 .showcase-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   letter-spacing: 1.5px;
 }
 
@@ -543,85 +591,20 @@
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  border: 1px solid #f3f3f3;
+  border: 1px solid rgb(243, 243, 243);
   border-radius: 2px;
   outline: none;
   cursor: pointer;
   transition: all 0.7s;
 }
 .card .card-overlay .card-overlay-button:hover {
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   background-color: rgba(10, 10, 10, 0.5);
   border: 1px solid #FFFFFF;
 }
 .card .card-image {
   object-fit: cover;
   padding: 5px;
-}
-
-/* ALGEMENE LAYOUT */
-/* HEADER */
-/* TOP */
-.hero {
-  padding-top: 72px;
-  width: 100%;
-  height: 66.66vh;
-  background: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.4)), url("../assets/bg_1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.hero .brand {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero .hero-banner {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* GALLERY */
-.gallery_header {
-  padding: 2rem;
-}
-
-.gallery .cards-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #0a0a0a;
-  padding: 2rem;
-}
-.gallery .cards-wrapper .card {
-  width: 25%;
-  aspect-ratio: 1/1;
-  padding: 0.5rem;
-}
-
-/* TOP */
-.home-transition {
-  width: 100%;
-  height: 65vh;
-  padding: 4rem 0;
-  background: linear-gradient(#0a0a0a, rgba(10, 10, 10, 0.5)), url("../assets/bg_1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home-transition .txt_body_xl {
-  max-width: 35ch;
-  text-align: center;
 }
 
 /* FOOTER */
@@ -652,7 +635,7 @@
   color: #FFFFFF;
 }
 .footer .footer-social-media .social-media .social-media-item .social-media-link:hover {
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   transition: all 0.7s;
 }
 .footer .footer-copyright {
@@ -663,6 +646,44 @@
   letter-spacing: 2px;
   text-align: center;
   text-transform: capitalize;
+}
+
+/* ALGEMENE LAYOUT */
+/* GALLERY */
+.gallery_header {
+  padding: 2rem;
+}
+
+.gallery .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #0a0a0a;
+  padding: 2rem;
+}
+.gallery .cards-wrapper .card {
+  width: 25%;
+  aspect-ratio: 1/1;
+  padding: 0.5rem;
+}
+
+/* TOP */
+.home-transition {
+  width: 100%;
+  height: 80vh;
+  padding: 4rem 0;
+  background: linear-gradient(#0a0a0a, rgba(10, 10, 10, 0.3), #0a0a0a), url("../assets/images/bg_2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.home-transition .txt_body_xl {
+  max-width: 35ch;
+  text-align: start;
 }
 
 .showcase {
@@ -733,7 +754,7 @@
 
 .showcase-socials li a {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 0.5rem;
   filter: invert(1);
   transform: scale(0.5);
   transition: 0.5s;
@@ -748,6 +769,34 @@
     object-fit: cover;
   }
 }
+/* HOME TOP V1 */
+.banner-wide {
+  padding-top: 72px;
+  width: 100%;
+  height: 66.66vh;
+  background: linear-gradient(rgba(10, 10, 10, 0.1), #0a0a0a), url("../assets/media/aurovision_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.banner-wide .banner-brand {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-wide .hero-banner {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .login-frame {
   width: 100%;
   height: 100%;
@@ -784,13 +833,13 @@
 .login-form .login-title {
   font-family: "Red Hat Display", sans-serif;
   font-size: 2.618rem;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   font-weight: 500;
 }
 .login-form .login-label {
   display: block;
   font-family: "Red Hat Display", sans-serif;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   font-size: 1rem;
   margin-top: 1rem;
   font-weight: 500;
@@ -801,7 +850,7 @@
   width: 100%;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(10, 10, 10, 0);
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   padding: 1rem;
   margin-top: 0.5rem;
   font-size: 1rem;
@@ -813,11 +862,11 @@
   background-color: rgba(255, 255, 255, 0.15);
 }
 .login-form .login-input_txt:focus {
-  border: 1px solid #f3f3f3;
+  border: 1px solid rgb(243, 243, 243);
 }
 .login-form ::placeholder {
   font-family: "Red Hat Display", sans-serif;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   font-size: 1rem;
   margin-top: 1rem;
   font-weight: 300;
@@ -826,32 +875,32 @@
   font-family: "Red Hat Display", sans-serif;
   margin-top: 2rem;
   width: 100%;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   padding: 0.5rem 0;
   font-size: 1.4rem;
   font-weight: 400;
   background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #f3f3f3;
+  border: 2px solid rgb(243, 243, 243);
   backdrop-filter: blur(6rem);
   border-radius: 2px;
   cursor: pointer;
 }
 .login-form .form-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
-  border: 2px solid #f3f3f3;
+  border: 2px solid rgb(243, 243, 243);
 }
 .login-form .form-link {
   display: inline-block;
   text-decoration: none;
   font-family: "Red Hat Display", sans-serif;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   font-weight: 400;
   font-size: 1rem;
   margin-top: 0.5rem;
 }
 .login-form .form-link:hover {
   font-style: italic;
-  border-bottom: 1px solid #f3f3f3;
+  border-bottom: 1px solid rgb(243, 243, 243);
 }
 
 .products-wrapper {
@@ -864,8 +913,9 @@
 .filter-menu {
   width: 25%;
   padding: 2rem;
-  background-color: #f3f3f3;
-  border-radius: 2px;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(243, 243, 243, 0.5);
+  border-radius: 1px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
@@ -876,7 +926,7 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.618rem;
   font-weight: 500;
-  color: #363636;
+  color: rgb(243, 243, 243);
   margin-bottom: 3rem;
 }
 .filter-menu .filter-list {
@@ -892,7 +942,7 @@
 }
 .filter-menu .filter-list .filter-listitem .filter-toggle {
   text-decoration: none;
-  color: #363636;
+  color: rgb(243, 243, 243);
 }
 .filter-menu .filter-list .filter-listitem .filter-toggle:hover {
   font-weight: 500;
@@ -923,6 +973,9 @@
   text-align: start;
   flex: 0 0 calc(33.3333% - 8px);
 }
+.product-list .product-card:hover {
+  border: 1px solid rgba(243, 243, 243, 0.5);
+}
 .product-list .product-card img {
   max-width: 100%;
   height: auto;
@@ -943,14 +996,14 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   margin-top: 0.5rem;
 }
 .product-list .product-card .card-info .card-txt .product-price {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   margin-bottom: 0.5rem;
 }
 .product-list .product-card .card-info .details-button {
@@ -961,7 +1014,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #0a0a0a;
-  background-color: #f3f3f3;
+  background-color: rgb(243, 243, 243);
   border: 1px solid #FFFFFF;
   padding: 0.5rem 1rem;
   outline: none;
@@ -970,9 +1023,10 @@
   transition: all 0.7s;
 }
 .product-list .product-card .card-info .details-button:hover {
-  color: #f3f3f3;
+  color: rgb(243, 243, 243);
   background-color: rgba(10, 10, 10, 0.5);
   border: 1px solid #FFFFFF;
+  letter-spacing: 1px;
 }
 
 .pagination {
@@ -988,8 +1042,8 @@
   margin: 0 5px;
   padding: 8px 16px;
   background-color: #0a0a0a;
-  color: #f3f3f3;
-  border: 1px solid #f3f3f3;
+  color: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
   border-radius: 2px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -997,5 +1051,160 @@
 .pagination .pagination-item:hover {
   background-color: #555;
 }
+
+.product-detail-page {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+/* Linker kolom met productinformatie */
+.product-info {
+  height: 100%;
+  width: 60%;
+  overflow-y: auto;
+  background-color: #0a0a0a;
+  color: rgb(243, 243, 243);
+  font-family: "Red Hat Display", sans-serif;
+  padding: 0 2rem;
+}
+.product-info .info-heading {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2.618rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+}
+.product-info .info-subheading {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 300;
+  color: rgb(243, 243, 243);
+}
+.product-info .product-info-list {
+  text-decoration: none;
+}
+.product-info .infotxt_lg {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2.618rem;
+  font-weight: 700;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+}
+.product-info .fa-star {
+  color: #ea68a9;
+  font-size: 1rem;
+  margin-right: 1px;
+  border: none;
+}
+
+/* Rechterkolom met productafbeelding en overlay */
+.product-image {
+  width: 40%;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 1rem 0px 1rem;
+  background-color: rgba(243, 243, 243, 0.8);
+  backdrop-filter: blur(2rem);
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: start;
+  padding: 2rem;
+  overflow: scroll;
+}
+.image-overlay .overlaytxt_sm {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 400;
+  color: #363636;
+  margin-bottom: 2rem;
+}
+
+.toggle-overlay {
+  position: absolute;
+  color: rgba(243, 243, 243, 0.75);
+  top: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  font-size: 1.618rem;
+  cursor: pointer;
+}
+
+/* Toon overlay wanneer de link wordt aangeklikt */
+.toggle-overlay:focus + .image-overlay {
+  display: flex;
+}
+
+/* Stijlen voor scrollbare productinformatie */
+.product-info {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+/* Stijlen voor de CTA-knop (Call to Action) */
+.cart-button {
+  display: inline-block;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0a0a0a;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.7s;
+}
+.cart-button:hover {
+  color: rgb(243, 243, 243);
+  background-color: rgba(10, 10, 10, 0.5);
+  border: 1px solid rgb(243, 243, 243);
+}
+
+.tech-specs {
+  margin-top: 3rem;
+  /* LINE */
+}
+.tech-specs .line {
+  width: 100%;
+  height: 1px;
+  background: #363636;
+}
+.tech-specs .specs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.tech-specs .specs-wrapper .specs-left, .tech-specs .specs-wrapper .specs-right {
+  width: 50%;
+}
+.tech-specs .specs-wrapper .product-info-list i {
+  width: 40px;
+  margin-right: 2rem;
+  color: #ea68a9;
+}
+
+/* Voeg meer stijlen en opmaak toe voor de productinformatie en andere details. */
 
 /*# sourceMappingURL=main.css.map */

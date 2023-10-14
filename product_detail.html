@@ -13,46 +13,140 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-black">
+<body class="bg-darkest">
 
-<nav class="navbar container-fluid">
+<!-- NAVBAR TOP -->
+<nav class="navbar bg-darkest container-fluid">
   <!-- <div class="navbar-brand"><img class="navbar-logo" src="assets/favicon.png" alt="Logo Placeholder"></div> -->
   <div class="navbar-brand"><a class="brand-link" href="index.html">AURO</a></div>
   <div class="navbar-links">
     <ul class="navbar-list">
-      <li class="navbar-listitem"><a href="#" class="navbar-link">Products</a></li>
+      <li class="navbar-listitem"><a href="products.html" class="navbar-link">Products</a></li>
       <li class="navbar-listitem"><a href="#" class="navbar-link">Cart</a></li>
-      <li class="navbar-listitem"><a href="login.html" class="navbar-link">Login</a></li>
+      <li class="navbar-listitem"><a href="login.html" class="login-button"><i class="fas fa-user-circle"></i> Login</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="container">
-  <aside class="filter-menu">
-    <h2>Filter</h2>
-    <ul>
-      <li><a href="#">All</a></li>
-      <li><a href="#">Auropods</a></li>
-      <li><a href="#">AuroVision</a></li>
-      <li><a href="#">AuroTouch</a></li>
-      <li><a href="#">AuroLink</a></li>
-    </ul>
-  </aside>
-  <main class="product-list">
-    <div class="product-card">
-      <img src="product1.jpg" alt="Product 1">
-      <h3>Product 1</h3>
-      <p class="price">$19.99</p>
-      <a href="product1.html" class="details-button">Details</a>
+  <section class="gallery_header bg-darkest mt-xl">
+    <p class="txt-body_md">Head into the future. Wear Auro.<br></p>
+    <h3 class="txt-title_sm">Discover our products:</h3>
+  </section>
+
+  <!-- PRODUCT DETAILS -->
+
+  <div class="container-fluid product-detail-page bg-darkest">
+
+    <!-- Linkerkolom met productafbeelding en overlay -->
+    <div class="product-image">
+      <div class="image-overlay">
+        <p class="overlaytxt_sm">The Auro Nubis represents a new era of wearable sound.</p>
+        <p class="overlaytxt_sm">"Sounds like a live concert, you can pair these with a VR-set and get blown away."</p>
+      </div>
+      <img src="assets/images/gallery_4.png" alt="AURO Nubis Earpods">
+      <a href="#" class="toggle-overlay"><i class="fa fa-plus-circle info-toggle"></i>️</a>
     </div>
-    <!-- Voeg meer productkaarten toe -->
-  </main>
-</div>
-<div class="pagination">
-  <!-- Voeg paginatie-inhoud toe -->
+
+    <!-- Rechterkolom met productinformatie -->
+    <div class="product-info">
+      <h1 class="info-heading">Nubis AuroPods.</h1>
+      <p class="info-subheading">Taking sound to a new dimension.</p>
+      <p class="infotxt_lg mt-md mb-md">€319</p>
+      <p class="infotxt_sm"><span class="infotxt_strong">Availability:</span> In stock.</p>
+      <p class="infotxt_sm"><span class="infotxt_strong">Ratings:</span>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </p>
+      <a href="#" class="cart-button mt-lg">Add to cart</a>
+    </div>
+  </div>
+
+<div class="container bg-darkest tech-specs">
+  <div class="line mb-sm"></div>
+  <div class="container-fluid specs-wrapper">
+    <div class="specs-left">
+      <p class="infotxt_lg mt-sm mb-md"><span class="infotxt_strong">Technical Specs:</span></p>
+      <ul class="product-info-list">
+        <li class="infotxt_sm"><i class="fas fa-stream"></i>Bone conduction</li>
+        <li class="infotxt_sm"><i class="fab fa-bluetooth-b"></i> Bluetooth 5.0</li>
+        <li class="infotxt_sm"><i class="fas fa-battery-full"></i>Battery Life: 24h</li>
+        <li class="infotxt_sm"><i class="fas fa-volume-up"></i>Active Noise Cancelling</li>
+        <li class="infotxt_sm"><i class="fas fa-mobile-alt"></i>Compatibility: Smartphone, tablet, laptop</li>
+        <li class="infotxt_sm"><i class="fas fa-comment-dots"></i>Supported: Siri, Google Assistant, Alexa</li>
+      </ul>
+    </div>
+    <div class="specs-right">
+      <p class="infotxt_lg mt-sm mb-md"><span class="infotxt_strong">Technical Specs:</span></p>
+      <ul class="product-info-list">
+        <li class="infotxt_sm"><i class="fas fa-stream"></i>Bone conduction</li>
+        <li class="infotxt_sm"><i class="fab fa-bluetooth-b"></i> Bluetooth 5.0</li>
+        <li class="infotxt_sm"><i class="fas fa-battery-full"></i>Battery Life: 24h</li>
+        <li class="infotxt_sm"><i class="fas fa-volume-up"></i>Active Noise Cancelling</li>
+        <li class="infotxt_sm"><i class="fas fa-mobile-alt"></i>Compatibility: Smartphone, tablet, laptop</li>
+        <li class="infotxt_sm"><i class="fas fa-comment-dots"></i>Supported: Siri, Google Assistant, Alexa</li>
+      </ul>
+    </div>
+  </div>
+  <div class="line mt-lg"></div>
 </div>
 
+<!-- FOOTER -->
 
+<footer class="footer">
+  <div class="footer-header">
+    <div>
+      <h1 class="brand-title">AURO</h1>
+      <p class="brand-subtitle">Feel the Future.</p>
+    </div>
+  </div>
+  <div class="footer-social-media">
+    <ul class="social-media">
+      <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-facebook-square"></i></a></li>
+      <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-instagram"></i></a></li>
+      <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-youtube"></i></a></li>
+      <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-snapchat"></i></a></li>
+    </ul>
+  </div>
+  <div class="footer-copyright">
+    <p class="footer-copyright-paragraph">&copy; AURO // All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<!-- SCRIPT !! -- VERPLAATSEN NAAR APARTE JS. -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleOverlay = document.querySelector(".toggle-overlay");
+    const imageOverlay = document.querySelector(".image-overlay");
+    const closeOverlay = document.querySelector(".close-overlay");
+
+    toggleOverlay.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (imageOverlay.style.display === "flex") {
+        imageOverlay.style.opacity = "0";
+        setTimeout(function () {
+          imageOverlay.style.display = "none";
+        }, 700); // 700 milliseconden voor de overgang
+      } else {
+        imageOverlay.style.display = "flex";
+        imageOverlay.style.opacity = "1";
+      }
+    });
+
+    closeOverlay.addEventListener("click", function (event) {
+      event.preventDefault();
+      imageOverlay.style.opacity = "0";
+      setTimeout(function () {
+        imageOverlay.style.display = "none";
+      }, 700); // 700 milliseconden voor de overgang
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -12,123 +12,120 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-
 <body class="bg-darkest">
-<nav class="navbar bg-darkest container-fluid">
-    <!-- <div class="navbar-brand"><img class="navbar-logo" src="assets/favicon.png" alt="Logo Placeholder"></div> -->
-    <div class="navbar-brand"><a class="brand-link" href="index.html">AURO</a></div>
-    <div class="navbar-links">
-        <ul class="navbar-list">
-            <li class="navbar-listitem"><a href="products.html" class="navbar-link">Products</a></li>
-            <li class="navbar-listitem"><a href="#" class="navbar-link">Cart</a></li>
-            <li class="navbar-listitem"><a href="login.html" class="navbar-link">Login</a></li>
+    <nav class="navbar bg-darkest container-fluid">
+        <!-- <div class="navbar-brand"><img class="navbar-logo" src="assets/favicon.png" alt="Logo Placeholder"></div> -->
+        <div class="navbar-brand"><a class="brand-link" href="index.html">AURO</a></div>
+        <div class="navbar-links">
+            <ul class="navbar-list">
+                <li class="navbar-listitem"><a href="products.html" class="navbar-link">Products</a></li>
+                <li class="navbar-listitem"><a href="#" class="navbar-link">Cart</a></li>
+                <li class="navbar-listitem"><a href="login.html" class="login-button"><i class="fas fa-user-circle"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="showcase">
+        <video class="video-bkg" src="assets/media/auro_vid2.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="showcase-text">
+            <h2 class="txt-heading_xl" >Find your vibe.</h2>
+            <p class="txt-body_md">You've never felt like this before.</p>
+            <a class="showcase-button" href="#">Explore</a>
+        </div>
+        <ul class="showcase-socials">
+            <li><a href="#"><i class="fas fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fas fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fas fa-facebook"></i></a></li>
         </ul>
-    </div>
-</nav>
+    </section>
 
-<section class="showcase">
-    <video class="video-bkg" src="assets/media/auro_vid2.mp4" muted loop autoplay></video>
-    <div class="overlay"></div>
-    <div class="showcase-text">
-        <h2 class="txt-heading_xl" >Find your vibe.</h2>
-        <p class="txt-body_md">You've never felt like this before.</p>
-        <a class="showcase-button" href="#">Explore</a>
-    </div>
-    <ul class="showcase-socials">
-        <li><a href="#"><i class="fas fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fas fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fas fa-facebook"></i></a></li>
-    </ul>
-</section>
+    <!-- PRODUCTS - CARD GALLERY -->
 
-<!-- HEADER
+    <section class="gallery_header bg-black">
+        <p class="txt-body_md">Head into the future. Wear Auro.<br></p>
+        <h3 class="txt-title_sm">Discover our products:</h3>
+    </section>
+    <section class="gallery">
+        <div class="cards-wrapper">
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">Auro Steroid</h1>
+                    <p class="card-overlay-paragraph">€299</p>
+                    <button type="button" class="card-overlay-button">Order now</button>
+                </div>
+                <img class="card-image" src="assets/images/gallery_3.png" alt="Schoen: Yeezy Boost 700 - Hi Res Blue">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">Auro Phonos</h1>
+                    <p class="card-overlay-paragraph">€259</p>
+                    <button type="button" class="card-overlay-button">Order now</button>
+                </div>
+                <img class="card-image" src="assets/images/gallery_4.png" alt="Schoen: Yeezy Boost 700 - Hi Res Blue">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">Auro Nova</h1>
+                    <p class="card-overlay-paragraph">€259</p>
+                    <button type="button" class="card-overlay-button">Order now</button>
+                </div>
+                <img class="card-image" src="assets/images/case_2.png" alt="Schoen: Yeezy Boost 700 - Hi Res Blue">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">Auro Neptune</h1>
+                    <p class="card-overlay-paragraph">€209</p>
+                    <button type="button" class="card-overlay-button">Order now</button>
+                </div>
+                <img class="card-image" src="assets/images/case_4.png" alt="Schoen: Yeezy Boost 700 - Hi Res Blue">
+            </div>
+        </div>
+    </section>
 
-    <header class="hero">
-        <div class="brand">
+<!-- TRANSITION-PIECE  -->
+    <section class="home-transition">
+            <h1 class="txt-subheader">Feel the Future.</h1>
+            <h3 class="txt_body_xl">AURO unravels a realm of sensation.</h3>
+            <h3 class="txt_body_xl">We can deliver clarity, silence, a bridge between the
+                rhythms of modernity and the timeless grace of a bygone age.
+                Let AURO become an extension of you, enriching life and proving that in the
+                midst of the cacophony, music could be a sanctuary, and innovation could be a timeless marvel.</h3>
+    </section>
+
+<!-- HERO PIECE -- CHANGE NAMES   -->
+
+    <section class="banner-wide">
+        <div class="banner-brand">
             <div>
-                <h1 class="brand-title">AURO</h1>
-                <p class="brand-subtitle">Feel the Future.</p>
+                <h1 class="brand-title">AuroVision</h1>
+                <p class="brand-subtitle">Experience more.</p>
             </div>
         </div>
         <div class="hero-banner">
             <h3 class="txt-subheader">Find your vibe.</h3>
             <button type="button" class="main-button">Buy now</button>
         </div>
-    </header>
--->
-
-
-<!-- GALLERY -->
-
-<section class="gallery_header bg-black">
-    <p class="txt-body_md">Head into the future. Wear Auro.<br></p>
-    <h3 class="txt-title_sm">Discover our products:</h3>
-</section>
-
-<section class="gallery">
-    <div class="cards-wrapper">
-        <div class="card">
-            <div class="card-overlay">
-                <h1 class="card-overlay-heading">Auro Steroid</h1>
-                <p class="card-overlay-paragraph">€299</p>
-                <button type="button" class="card-overlay-button">Order now</button>
-            </div>
-            <img class="card-image" src="assets/images/gallery_3.png" alt="Schoen: Yeezy Boost 700 - Hi Res Blue">
-        </div>
-        <div class="card">
-            <div class="card-overlay">
-                <h1 class="card-overlay-heading">Auro Phonos</h1>
-                <p class="card-overlay-paragraph">€259</p>
-                <button type="button" class="card-overlay-button">Order now</button>
-            </div>
-            <img class="card-image" src="assets/images/gallery_4.png" alt="Schoen: Yeezy Boost 700 - Hi Res Blue">
-        </div>
-        <div class="card">
-            <div class="card-overlay">
-                <h1 class="card-overlay-heading">Auro Nova</h1>
-                <p class="card-overlay-paragraph">€259</p>
-                <button type="button" class="card-overlay-button">Order now</button>
-            </div>
-            <img class="card-image" src="assets/images/case_2.png" alt="Schoen: Yeezy Boost 700 - Hi Res Blue">
-        </div>
-        <div class="card">
-            <div class="card-overlay">
-                <h1 class="card-overlay-heading">Auro Neptune</h1>
-                <p class="card-overlay-paragraph">€209</p>
-                <button type="button" class="card-overlay-button">Order now</button>
-            </div>
-            <img class="card-image" src="assets/images/case_4.png" alt="Schoen: Yeezy Boost 700 - Hi Res Blue">
-        </div>
-    </div>
-</section>
-
-<!-- TRANSITION-PIECE  -->
-<header class="home-transition">
-        <h3 class="txt_body_xl">In the heart of the bustling city, AURO Earpods unveil a world of sonic wonder. Amidst the chaos, they deliver clarity and silence, offering a bridge between the rhythms of modernity and the timeless grace of classical compositions. With each note, AURO becomes an extension of you, enriching life and proving that in the midst of the cacophony, music could be a sanctuary, and innovation could be a timeless marvel.</h3>
-</header>
+    </section>
 
 <!-- FOOTER -->
-
-<footer class="footer">
-    <div class="footer-header">
-        <div>
-            <h1 class="brand-title">AURO</h1>
-            <p class="brand-subtitle">Feel the Future.</p>
+    <footer class="footer">
+        <div class="footer-header">
+            <div>
+                <h1 class="brand-title">AURO</h1>
+                <p class="brand-subtitle">Feel the Future.</p>
+            </div>
         </div>
-    </div>
-    <div class="footer-social-media">
-        <ul class="social-media">
-            <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-facebook-square"></i></a></li>
-            <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-instagram"></i></a></li>
-            <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-youtube"></i></a></li>
-            <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-snapchat"></i></a></li>
-        </ul>
-    </div>
-    <div class="footer-copyright">
-        <p class="footer-copyright-paragraph">&copy; AURO // All rights reserved.</p>
-    </div>
-</footer>
-
-
-
+        <div class="footer-social-media">
+            <ul class="social-media">
+                <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-facebook-square"></i></a></li>
+                <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-youtube"></i></a></li>
+                <li class="social-media-item"><a href="#" class="social-media-link"><i class="fab fa-snapchat"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p class="footer-copyright-paragraph">&copy; AURO // All rights reserved.</p>
+        </div>
+    </footer>
 </body>

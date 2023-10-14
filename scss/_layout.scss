@@ -2,32 +2,6 @@
 
 /* ALGEMENE LAYOUT */
 
-/* HEADER */
-
-
-/* TOP */
-
-.hero {
-  padding-top: 72px;
-  width: 100%;
-  height: 66.66vh;
-  background: linear-gradient(rgba($color-darkest, .75), rgba($color-darkest, .4)), url("../assets/bg_1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
-
-  .brand {
-    @include positionFromTop(40%);
-    @include flexlayout();
-  }
-  .hero-banner {
-    @include positionFromTop(75%);
-    text-align: center;
-  }
-}
-
 /* GALLERY */
 
 .gallery_header {
@@ -52,57 +26,21 @@
 
 .home-transition {
   width: 100%;
-  height: 65vh;
+  height: 80vh;
   padding: 4rem 0;
-  background: linear-gradient(rgba($color-darkest, 1), rgba($color-darkest, .5)), url("../assets/bg_1.png");
+  background: linear-gradient(rgba($color-darkest, 1), rgba($color-darkest, 0.3), rgba($color-darkest, 1)), url("../assets/images/bg_2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   @include flexlayout();
+  flex-direction: column;
+  justify-content: space-evenly;
   .txt_body_xl {
     max-width: 35ch;
-    text-align: center;
+    text-align: start;
   }
 }
 
-/* FOOTER */
-
-.footer {
-  padding: 3rem 1rem 3rem 1rem;
-  @include flexlayout();
-  flex-direction: column;
-  .footer-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  .footer-social-media {
-    .social-media {
-      display: flex;
-      width: 300px;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-      .social-media-item {
-        list-style-type: none;
-        .social-media-link {
-          text-decoration: none;
-          font-size: 1.5rem;
-          color: $color-white;
-          &:hover {
-            color: $color-light;
-            transition: all 0.7s;
-          }
-        }
-      }
-    }
-  }
-  .footer-copyright {
-    font-family: $font-redhat-display;
-    font-size: 18px;
-    color: $color-white;
-    @include textStyles(capitalize);
-  }
-}
 
 .showcase {
   position: relative;
@@ -171,7 +109,7 @@
 .showcase-socials li a
 {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: $margin-xs;
   filter: invert(1);
   transform: scale(0.5);
   transition: 0.5s;
@@ -184,5 +122,26 @@
 @media (min-width: $screen-xs) and (max-width: $screen-md) {
   .video-bkg {
     object-fit: cover;
+  }
+}
+
+/* HOME TOP V1 */
+
+.banner-wide {
+  padding-top: 72px;
+  width: 100%;
+  height: 66.66vh;
+  background: linear-gradient(rgba($color-darkest, .1), rgba($color-darkest, 1)), url("../assets/media/aurovision_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .banner-brand {
+    @include positionFromTop(40%);
+    @include flexlayout();
+  }
+  .hero-banner {
+    @include positionFromTop(75%);
+    text-align: center;
   }
 }

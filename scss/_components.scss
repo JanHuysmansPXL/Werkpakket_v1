@@ -93,17 +93,39 @@
         list-style-type: none;
         color: $color-primary;
         display: inline;
+        .login-button {
+          text-decoration: none;
+          color: $color-darkest;
+          background-color: $color-light;
+          font-family: $font-redhat-display;
+          font-weight: 500;
+          font-size: .95rem;
+          border: 1px solid $color-darkest;
+          border-radius: 999px;
+          transition: all .5s;
+          padding: 6px 12px;
+          margin-left: 2rem;
+          &:hover {
+            font-weight: 500;
+            background-color: $color-darkest;
+            color: $color-light;
+            border: 1px solid $color-light;
+          }
+          .fa-user-circle {
+            margin-right: .5rem;
+          }
+        }
         .navbar-link {
           text-decoration: none;
           color: $color-white;
           font-family: $font-redhat-display;
-          font-weight: 400;
+          font-weight: 500;
           font-size: .95rem;
           margin-left: 1.25rem;
           padding-bottom: 6px;
-          transition: ease .7s;
+          transition: all .5s;
           &:hover {
-            font-weight: 600;
+            font-weight: 500;
             border-bottom: 2px solid $color-light;
           }
         }
@@ -194,6 +216,14 @@
   margin-bottom: .2rem;
 }
 
+.txt-body_lg {
+  font-family: $font-redhat-display;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $color-white;
+  margin-bottom: .2rem;
+}
+
 .txt_body_xl {
   font-family: $font-redhat-display;
   font-size: $fs-md;
@@ -202,6 +232,25 @@
   color: $color-white;
   margin-bottom: .2rem;
 }
+
+.infotxt_sm {
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 300;
+  color: $color-white;
+  margin-bottom: .7rem;
+  list-style-type: none;
+}
+.infotxt_strong {
+  font-family: $font-redhat-display;
+  font-size: $fs-sm;
+  font-weight: 500;
+  color: $color-white;
+  margin-bottom: .7rem;
+  list-style-type: none;
+}
+
+
 
 /* BUTTONS */
 
@@ -328,5 +377,45 @@
     @extend %fullSpace;
     object-fit: cover;
     padding: 5px;
+  }
+}
+
+
+/* FOOTER */
+
+.footer {
+  padding: 3rem 1rem 3rem 1rem;
+  @include flexlayout();
+  flex-direction: column;
+  .footer-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .footer-social-media {
+    .social-media {
+      display: flex;
+      width: 300px;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      .social-media-item {
+        list-style-type: none;
+        .social-media-link {
+          text-decoration: none;
+          font-size: 1.5rem;
+          color: $color-white;
+          &:hover {
+            color: $color-light;
+            transition: all 0.7s;
+          }
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    font-family: $font-redhat-display;
+    font-size: 18px;
+    color: $color-white;
+    @include textStyles(capitalize);
   }
 }
