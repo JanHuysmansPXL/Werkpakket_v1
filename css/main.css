@@ -235,6 +235,18 @@
   padding-bottom: 5rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 /* MIXINS */
 .card .card-overlay, .card .card-image {
   width: 100%;
@@ -287,18 +299,6 @@
     max-width: 1370px;
   }
 }
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -607,9 +607,14 @@
   padding: 5px;
 }
 
+.gallery_header {
+  width: 100%;
+  padding: 0.5rem 2rem;
+}
+
 /* FOOTER */
 .footer {
-  padding: 3rem 1rem 3rem 1rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -622,16 +627,16 @@
 }
 .footer .footer-social-media .social-media {
   display: flex;
-  width: 300px;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+  width: 240px;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
 }
 .footer .footer-social-media .social-media .social-media-item {
   list-style-type: none;
 }
 .footer .footer-social-media .social-media .social-media-item .social-media-link {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #FFFFFF;
 }
 .footer .footer-social-media .social-media .social-media-item .social-media-link:hover {
@@ -650,40 +655,18 @@
 
 /* ALGEMENE LAYOUT */
 /* GALLERY */
-.gallery_header {
+.gallery {
   padding: 2rem;
 }
-
 .gallery .cards-wrapper {
   display: flex;
   flex-wrap: wrap;
   background-color: #0a0a0a;
-  padding: 2rem;
 }
 .gallery .cards-wrapper .card {
   width: 25%;
+  flex-grow: 1;
   aspect-ratio: 1/1;
-  padding: 0.5rem;
-}
-
-/* TOP */
-.home-transition {
-  width: 100%;
-  height: 80vh;
-  padding: 4rem 0;
-  background: linear-gradient(#0a0a0a, rgba(10, 10, 10, 0.3), #0a0a0a), url("../assets/images/bg_2.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.home-transition .txt_body_xl {
-  max-width: 35ch;
-  text-align: start;
 }
 
 .showcase {
@@ -765,16 +748,49 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
+  .gallery {
+    padding: 2rem;
+  }
+  .gallery .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0a0a0a;
+  }
+  .gallery .cards-wrapper .card {
+    width: 100%;
+    flex-grow: 1;
+    aspect-ratio: 1/1;
+  }
   .video-bkg {
     object-fit: cover;
   }
 }
+/* TRANSITION TEXT / IMAGE BG */
+.home-transition {
+  width: 100%;
+  height: 80vh;
+  padding: 2rem 2rem;
+  background: linear-gradient(#0a0a0a, rgba(10, 10, 10, 0.3), black), url("../assets/images/bg_2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.home-transition .txt_body_xl {
+  max-width: 38ch;
+  text-align: start;
+}
+
 /* HOME TOP V1 */
 .banner-wide {
-  padding-top: 72px;
   width: 100%;
-  height: 66.66vh;
-  background: linear-gradient(rgba(10, 10, 10, 0.1), #0a0a0a), url("../assets/media/aurovision_1.png");
+  margin-top: 8rem;
+  height: 60vh;
+  background: linear-gradient(rgba(10, 10, 10, 0), black), url("../assets/images/aurovision_1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -782,7 +798,7 @@
 }
 .banner-wide .banner-brand {
   position: absolute;
-  top: 40%;
+  top: -20%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -791,7 +807,7 @@
 }
 .banner-wide .hero-banner {
   position: absolute;
-  top: 75%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -1052,6 +1068,62 @@
   background-color: #555;
 }
 
+@media (max-width: 768px) {
+  .products-wrapper {
+    flex-direction: column;
+  }
+  .filter-menu {
+    flex-direction: row;
+    width: 100%;
+    height: 96px;
+    padding: 0;
+    border: none;
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  .filter-menu .filter-title {
+    display: none;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(243, 243, 243);
+    margin-bottom: 0.5rem;
+  }
+  .filter-menu .filter-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .filter-menu .filter-list .filter-listitem {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  .filter-menu .filter-list .filter-listitem .filter-toggle {
+    text-decoration: none;
+    color: rgb(243, 243, 243);
+  }
+  .filter-menu .filter-list .filter-listitem .filter-toggle:hover {
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .product-list {
+    margin-top: 2rem;
+    padding: 0;
+    width: 100%;
+  }
+  .filter-listitem {
+    display: block;
+  }
+  .product-card {
+    flex: 1 1 100%;
+  }
+}
 .product-detail-page {
   display: flex;
   align-items: start;
@@ -1201,10 +1273,39 @@
 }
 .tech-specs .specs-wrapper .product-info-list i {
   width: 40px;
-  margin-right: 2rem;
+  margin-right: 1.2rem;
   color: #ea68a9;
 }
 
-/* Voeg meer stijlen en opmaak toe voor de productinformatie en andere details. */
+/* MEDIA QUERIES. */
+@media (min-width: 320px) and (max-width: 768px) {
+  .product-info {
+    margin-top: 2rem;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+  .product-detail-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-detail-page .product-image {
+    width: 100%;
+    position: relative;
+  }
+  .tech-specs .specs-wrapper {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .tech-specs .specs-wrapper .specs-left, .tech-specs .specs-wrapper .specs-right {
+    width: 100%;
+  }
+  .tech-specs .specs-wrapper .product-info-list i {
+    width: 40px;
+    margin-right: 0.8rem;
+    color: #ea68a9;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

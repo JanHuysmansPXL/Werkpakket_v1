@@ -158,3 +158,64 @@
     }
   }
 }
+
+@media (max-width: $screen-md) {
+  .products-wrapper {
+    flex-direction: column; // Stack filter and product list on smaller screens
+  }
+
+  .filter-menu {
+    flex-direction: row;
+    width: 100%; // Full width on smaller screens
+    height: 96px;
+    padding: 0;
+    border: none;
+    border-radius: 1px;
+    overflow: hidden;
+
+    .filter-title {
+      display: none;
+      font-family: $font-redhat-display;
+      font-size: $fs-sm;
+      font-weight: 500;
+      color: $color-light;
+      margin-bottom: $margin-xs;
+    }
+    .filter-list {
+      @include flexlayout();
+      justify-content: space-around;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .filter-listitem {
+        font-family: $font-redhat-display;
+        font-size: $fs-sm;
+        font-weight: 400;
+        margin-bottom: 0;
+        .filter-toggle {
+          text-decoration: none;
+          color: $color-light;
+          &:hover {
+            font-weight: 500;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  .product-list {
+    margin-top: 2rem;
+    padding: 0;
+    width: 100%; // Full width on smaller screens
+  }
+
+  .filter-listitem {
+    display: block; // Display list items vertically on smaller screens
+  }
+
+  .product-card {
+    flex: 1 1 100%; // Full width for product cards on smaller screens
+  }
+}

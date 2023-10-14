@@ -127,6 +127,19 @@ $padding-xl: 5rem;
 .pb-lg { padding-bottom: $padding-lg;}
 .pb-xl { padding-bottom: $padding-xl;}
 
+// Text-align classes
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 /* MIXINS */
 
 @mixin flexlayout() {

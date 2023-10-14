@@ -51,20 +51,6 @@
   }
 }
 
-// Text-align classes
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-
 /* NAVBAR */
 
 .navbar {
@@ -250,8 +236,6 @@
   list-style-type: none;
 }
 
-
-
 /* BUTTONS */
 
 .main-button {
@@ -316,18 +300,15 @@
   }
 }
 
-
 /* CARD */
 .card {
   position: relative;
   overflow: hidden;
-
   /* CHILD ELEMENT (OVERLAY) GEKOPPELD DOOR DEZE .class TE VERMELDEN NA HET HOVER ELEMENT (CARD)) */
   &:hover .card-overlay {
     left: 0;
     transition: all 0.7s;
     backdrop-filter: blur(2px);
-
   }
   .card-overlay {
     position: absolute;
@@ -380,11 +361,15 @@
   }
 }
 
+.gallery_header {
+  width: 100%;
+  padding: $padding-xs $padding-md;
+}
 
 /* FOOTER */
 
 .footer {
-  padding: 3rem 1rem 3rem 1rem;
+  padding: $padding-sm $padding-md;
   @include flexlayout();
   flex-direction: column;
   .footer-header {
@@ -395,14 +380,14 @@
   .footer-social-media {
     .social-media {
       display: flex;
-      width: 300px;
-      justify-content: space-between;
-      margin-bottom: 2rem;
+      width: 240px;
+      justify-content: space-evenly;
+      margin-bottom: $margin-sm;
       .social-media-item {
         list-style-type: none;
         .social-media-link {
           text-decoration: none;
-          font-size: 1.5rem;
+          font-size: $fs-sm;
           color: $color-white;
           &:hover {
             color: $color-light;
