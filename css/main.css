@@ -1068,46 +1068,44 @@
   .products-wrapper {
     flex-direction: column;
   }
-  .filter-menu {
+  .products-wrapper .filter-menu {
     flex-direction: row;
-    margin: 2rem 0;
     width: 100%;
-    height: 96px;
+    height: 80px;
     padding: 2px;
     border: none;
     border-radius: 1px;
-    overflow: hidden;
+    overflow: visible;
   }
-  .filter-menu .filter-title {
+  .products-wrapper .filter-menu .filter-title {
     display: none;
     font-family: "Red Hat Display", sans-serif;
     font-size: 1rem;
     font-weight: 500;
     color: rgb(243, 243, 243);
-    margin-bottom: 0.5rem;
   }
-  .filter-menu .filter-list {
+  .products-wrapper .filter-menu .filter-list {
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-around;
+    margin: 0 2rem;
+    justify-content: space-between;
     list-style: none;
-    padding: 0;
-    margin: 0;
   }
-  .filter-menu .filter-list .filter-listitem {
+  .products-wrapper .filter-menu .filter-list .filter-listitem {
     font-family: "Red Hat Display", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     margin: 1rem 0;
   }
-  .filter-menu .filter-list .filter-listitem .filter-toggle {
+  .products-wrapper .filter-menu .filter-list .filter-listitem .filter-toggle {
     text-decoration: none;
     color: rgb(243, 243, 243);
   }
-  .filter-menu .filter-list .filter-listitem .filter-toggle:hover {
+  .products-wrapper .filter-menu .filter-list .filter-listitem .filter-toggle:hover {
     font-weight: 500;
     letter-spacing: 1px;
+    border-bottom: 1px solid white;
   }
   .product-list {
     margin-top: 2rem;
