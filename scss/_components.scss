@@ -3,7 +3,7 @@
 
 /* UTILITIES */
 
-/* GRID SYSTEM */
+/* GRID */
 
 .container-fluid {
   width: 100%;
@@ -202,7 +202,7 @@
   margin-bottom: .2rem;
 }
 
-.txt-body_lg {
+.txt_body_lg {
   font-family: $font-redhat-display;
   font-size: 1.3rem;
   font-weight: 500;
@@ -334,12 +334,15 @@
       margin-bottom: 1rem;
     }
     .card-overlay-button {
+      display: block;
       width: 150px;
-      height: 40px;
+      padding: 10px 0;
       color: $color-primary;
+      text-decoration: none;
+      text-align: center;
       background-color: $color-white;
       font-family: $font-redhat-display;
-      font-size: 14px;
+      font-size: $fs-sm;
       font-weight: bold;
       letter-spacing: 1px;
       border: 1px solid $color-light;

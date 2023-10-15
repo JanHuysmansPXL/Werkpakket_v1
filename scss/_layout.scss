@@ -86,24 +86,6 @@
   transform: scale(0.5) translateY(-15px);
 }
 
-@media (min-width: $screen-xs) and (max-width: $screen-md) {
-  .gallery {
-    padding: $padding-md;
-    .cards-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: $color-darkest;
-      .card {
-        width: 100%;
-        flex-grow: 1;
-        aspect-ratio: 1 / 1;
-      }
-    }
-  }
-  .video-bkg {
-    object-fit: cover;
-  }
-}
 
 
 
@@ -144,5 +126,33 @@
   .hero-banner {
     @include positionFromTop(80%);
     text-align: center;
+  }
+}
+
+
+
+@media (min-width: $screen-xs) and (max-width: $screen-md) {
+  .gallery {
+    .cards-wrapper {
+      .card {
+        width: 100%;
+        flex-grow: 1;
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+  .video-bkg {
+    object-fit: cover;
+  }
+}
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
+  .gallery {
+    .cards-wrapper {
+      .card {
+        width: 50%;
+        flex-grow: 1;
+        aspect-ratio: 1 / 1;
+      }
+    }
   }
 }

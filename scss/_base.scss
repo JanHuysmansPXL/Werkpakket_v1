@@ -20,7 +20,6 @@ $color-dark: #363636;
 $color-transparant: rgba(255,255,255,0.05);
 
 /* FONT SIZES */
-
 $fs-sm: 1rem;
 $fs-md: 1.618rem;
 $fs-lg: 2.618rem;
@@ -42,18 +41,17 @@ $screen-xxl: 1400px;
 .bg-primary {background-color: $color-primary;}
 .bg-secondary {background-color: $color-secondary;}
 
-
 .bg-darkest {background-color: $color-darkest;}
 .bg-black {background-color: $color-black;}
 
 .bg-transparant {background-color: rgba(255,255,255,0.05);}
 
+/* TEXT COLORS */
 .txt-white {color: $color-white;}
 .txt-light {color: $color-light;}
 
 .txt-primary {color: $color-primary;}
 .txt-secondary {color: $color-secondary;}
-
 
 .txt-darkest {color: $color-darkest;}
 .txt-black {color: $color-black;}
@@ -61,9 +59,7 @@ $screen-xxl: 1400px;
 /* BASE FONTS - TYPESET */
 $font-redhat-display: 'Red Hat Display', sans-serif;
 
-
 // PADDING / MARGIN - SETUP
-
 $margin-xs: .5rem;
 $margin-sm: 1rem;
 $margin-md: 2rem;
@@ -77,7 +73,6 @@ $padding-lg: 3rem;
 $padding-xl: 5rem;
 
 /* MARGIN / PADDING - UTILITY CLASSES*/
-
 .mx-auto { margin: 0 auto }
 
 .mt-0 { margin-top: 0}
