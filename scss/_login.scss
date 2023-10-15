@@ -30,14 +30,12 @@
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 3rem 2rem;
     transition: style ease .7s;
-
     .login-title {
         font-family: $font-redhat-display;
         font-size: $fs-lg;
         color: $color-light;
         font-weight: 500;
     }
-
     .login-label {
         display: block;
         font-family: $font-redhat-display;
@@ -104,4 +102,12 @@
             border-bottom: 1px solid $color-light;
         }
     }
+}
+
+
+@media (min-width: $screen-xs) and (max-width: $screen-md) {
+
+    .login-form {
+        height: min-content;
+        width: 320px;}
 }
