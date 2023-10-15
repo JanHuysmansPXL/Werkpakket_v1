@@ -4,7 +4,7 @@
   display: flex;
   height: 95vh;
   padding: 0 $padding-md;
-  overflow: hidden; // Voeg een overflow-hidden toe om de scrollende inhoud binnen de container te houden
+  overflow: hidden;
 }
 
 // Filtermenu
@@ -17,8 +17,8 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
-  height: 100vh; // Volledige hoogte voor het filtermenu
-  overflow-y: auto; // Voeg een overflow-y toe om de scrollbaarheid binnen het filtermenu in te schakelen
+  height: 100vh;
+  overflow-y: auto;
 
   .filter-title {
     font-family: $font-redhat-display;
@@ -50,16 +50,6 @@
 }
 
 // Productkaarten
-
-
-/* .product-list {
-  width: 85%; // Verminder de breedte van productlijst
-  padding-left: $padding-sm;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  overflow-y: auto; // Voeg een overflow-y toe om de productlijst scrollbaar te maken
-*/
 
 .product-list {
   width: 75%;
@@ -108,7 +98,6 @@
           margin-bottom: $margin-xs;
         }
       }
-
       .details-button {
         font-family: $font-redhat-display;
         font-size: $fs-sm;
@@ -128,7 +117,7 @@
           color: $color-light;
           background-color: transparentize($color-darkest, .5);
           border: 1px solid $color-white;
-          letter-spacing: 1px;
+          letter-spacing: 2px;
         }
       }
     }
@@ -143,7 +132,6 @@
   display: flex;
   justify-content: center;
   padding: $padding-md;
-
   .pagination-item {
     margin: 0 5px;
     padding: 8px 16px;
@@ -159,14 +147,15 @@
   }
 }
 
+// ON SMALLER SCREENS:
+
 @media (max-width: $screen-md) {
   .products-wrapper {
-    flex-direction: column; // Stack filter and product list on smaller screens
+    flex-direction: column;
   }
-
   .filter-menu {
     flex-direction: row;
-    width: 100%; // Full width on smaller screens
+    width: 100%;
     height: 96px;
     padding: 0;
     border: none;
@@ -187,7 +176,6 @@
       list-style: none;
       padding: 0;
       margin: 0;
-
       .filter-listitem {
         font-family: $font-redhat-display;
         font-size: $fs-sm;
@@ -204,18 +192,15 @@
       }
     }
   }
-
   .product-list {
     margin-top: 2rem;
     padding: 0;
-    width: 100%; // Full width on smaller screens
+    width: 100%; //Volle breedte op klein scherm.
   }
-
   .filter-listitem {
-    display: block; // Display list items vertically on smaller screens
+    display: block;
   }
-
   .product-card {
-    flex: 1 1 100%; // Full width for product cards on smaller screens
+    flex: 1 1 100%; //Volle breedte op klein scherm.
   }
 }

@@ -68,9 +68,17 @@
   backdrop-filter: blur(.5rem);
   background: linear-gradient(rgba($color-light, .01), rgba($color-light,.01));
   .navbar-brand {
-    .navbar-logo {
-      max-width: 60px;
-      object-fit: contain;
+    .brand-link {
+      text-decoration: none;
+      font-family: $font-redhat-display;
+      color: $color-light;
+      font-weight: 700;
+      font-size: $fs-md;
+      transition: 1.2s;
+      &:hover {
+        color: rgba($color-light, 0.9);
+        letter-spacing: 2px;
+      }
     }
   }
   .navbar-links {
@@ -93,7 +101,7 @@
           margin-left: 2rem;
           &:hover {
             font-weight: 500;
-            background-color: $color-darkest;
+            background-color: $color-transparant;
             color: $color-light;
             border: 1px solid $color-light;
           }
@@ -122,14 +130,6 @@
 
 
 /* BRAND TEXT */
-
-.brand-link {
-  text-decoration: none;
-  font-family: $font-redhat-display;
-  color: $color-white;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
 
 .brand-title {
   @include textStyles();

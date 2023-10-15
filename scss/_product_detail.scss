@@ -6,34 +6,85 @@
   justify-content: space-between;
 }
 
-/* Linker kolom met productinformatie */
+
+/* Linkerkolom met productafbeelding en overlay */
+.product-image {
+  width: 40%;
+  position: relative;
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 $padding-sm;
+    background-color: transparentize($color-light, .8);
+    backdrop-filter: blur(2rem);
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: start;
+    padding: $padding-md;
+    overflow: scroll;
+    .overlaytxt_sm {
+      font-family: $font-redhat-display;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $color-light;
+      margin-bottom: $margin-md;
+    }
+  }
+
+  .toggle-overlay {
+    position: absolute;
+    color: rgba($color-light, 0.75);
+    top: 1rem;
+    right: 1rem;
+    text-decoration: none;
+    font-size: $fs-md;
+    cursor: pointer;
+    &:hover {
+      color: rgba($color-light, 1);
+    }
+  }
+  .toggle-overlay:focus + .image-overlay {
+    display: flex;
+  }
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rechter kolom met productinformatie */
 .product-info {
   height: 100%;
+  max-height: 100vh;
   width: 60%;
-  overflow-y: auto;
   background-color: $color-darkest;
   color: $color-light;
   font-family: $font-redhat-display;
   padding: 0 $padding-md;
-
+  overflow-y: scroll;
   .info-heading {
     font-family: $font-redhat-display;
     font-size: $fs-lg;
     font-weight: 500;
     color: $color-light;
   }
-
   .info-subheading {
     font-family: $font-redhat-display;
     font-size: $fs-md;
     font-weight: 300;
     color: $color-light;
   }
-
   .product-info-list {
     text-decoration: none;
   }
-
   .infotxt_lg {
     font-family: $font-redhat-display;
     font-size: $fs-lg;
@@ -43,75 +94,13 @@
     list-style-type: none;
   }
   .fa-star {
-    color: #ea68a9;
+    color: $color-light;
     font-size: 1rem;
     margin-right: 1px;
     border: none;
   }
 }
 
-
-
-/* Rechterkolom met productafbeelding en overlay */
-.product-image {
-  width: 40%;
-  position: relative;
-}
-
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0px 1rem 0px 1rem;
-  background-color: transparentize($color-light, .2);
-  backdrop-filter: blur(2rem);
-  display: none;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  font-size: 1.2rem;
-  text-align: start;
-  padding: $padding-md;
-  overflow: scroll;
-    .overlaytxt_sm {
-      font-family: $font-redhat-display;
-      font-size: $fs-md;
-      font-weight: 400;
-      color: $color-dark;
-      margin-bottom: $margin-md;
-  }
-}
-
-.toggle-overlay {
-  position: absolute;
-  color: rgba($color-light, 0.75);
-  top: 1rem;
-  right: 1rem;
-  text-decoration: none;
-  font-size: $fs-md;
-  cursor: pointer;
-}
-
-/* Toon overlay wanneer de link wordt aangeklikt */
-.toggle-overlay:focus + .image-overlay {
-  display: flex;
-}
-
-/* Stijlen voor scrollbare productinformatie */
-.product-info {
-  max-height: 100vh;
-  overflow-y: scroll;
-}
-
-/* Stijlen voor de CTA-knop (Call to Action) */
 .cart-button {
   display: inline-block;
   font-family: $font-redhat-display;
@@ -153,7 +142,7 @@
     .product-info-list i {
       width: 40px;
       margin-right: 1.2rem;
-      color: #ea68a9;
+      color: $color-light;
     }
   }
 }
@@ -161,6 +150,18 @@
 /* MEDIA QUERIES. */
 
 @media (min-width: $screen-xs) and (max-width: $screen-md) {
+  .product-image {
+    .image-overlay {
+      border-radius: 0 $padding-xs;
+      .overlaytxt_sm {
+        font-family: $font-redhat-display;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $color-dark;
+        margin-bottom: $margin-sm;
+      }
+    }
+  }
   .product-info {
     margin-top: $margin-md;
     width: 100%;
@@ -186,9 +187,9 @@
       .product-info-list i {
         width: 40px;
         margin-right: .8rem;
-        color: #ea68a9;
       }
     }
   }
 }
+
 

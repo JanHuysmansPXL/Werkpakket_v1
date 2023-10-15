@@ -315,9 +315,17 @@
   backdrop-filter: blur(0.5rem);
   background: linear-gradient(rgba(243, 243, 243, 0.01), rgba(243, 243, 243, 0.01));
 }
-.navbar .navbar-brand .navbar-logo {
-  max-width: 60px;
-  object-fit: contain;
+.navbar .navbar-brand .brand-link {
+  text-decoration: none;
+  font-family: "Red Hat Display", sans-serif;
+  color: rgb(243, 243, 243);
+  font-weight: 700;
+  font-size: 1.618rem;
+  transition: 1.2s;
+}
+.navbar .navbar-brand .brand-link:hover {
+  color: rgba(243, 243, 243, 0.9);
+  letter-spacing: 2px;
 }
 .navbar .navbar-links .navbar-list .navbar-listitem {
   list-style-type: none;
@@ -339,7 +347,7 @@
 }
 .navbar .navbar-links .navbar-list .navbar-listitem .login-button:hover {
   font-weight: 500;
-  background-color: #0a0a0a;
+  background-color: rgba(255, 255, 255, 0.05);
   color: rgb(243, 243, 243);
   border: 1px solid rgb(243, 243, 243);
 }
@@ -362,14 +370,6 @@
 }
 
 /* BRAND TEXT */
-.brand-link {
-  text-decoration: none;
-  font-family: "Red Hat Display", sans-serif;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
 .brand-title {
   font-weight: 300;
   letter-spacing: 2px;
@@ -965,14 +965,6 @@
   letter-spacing: 1px;
 }
 
-/* .product-list {
-  width: 85%; // Verminder de breedte van productlijst
-  padding-left: $padding-sm;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  overflow-y: auto; // Voeg een overflow-y toe om de productlijst scrollbaar te maken
-*/
 .product-list {
   width: 75%;
   padding-left: 1rem;
@@ -1042,7 +1034,7 @@
   color: rgb(243, 243, 243);
   background-color: rgba(10, 10, 10, 0.5);
   border: 1px solid #FFFFFF;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .pagination {
@@ -1130,15 +1122,68 @@
   justify-content: space-between;
 }
 
-/* Linker kolom met productinformatie */
+/* Linkerkolom met productafbeelding en overlay */
+.product-image {
+  width: 40%;
+  position: relative;
+}
+.product-image .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 1rem;
+  background-color: rgba(243, 243, 243, 0.2);
+  backdrop-filter: blur(2rem);
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: start;
+  padding: 2rem;
+  overflow: scroll;
+}
+.product-image .image-overlay .overlaytxt_sm {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(243, 243, 243);
+  margin-bottom: 2rem;
+}
+.product-image .toggle-overlay {
+  position: absolute;
+  color: rgba(243, 243, 243, 0.75);
+  top: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  font-size: 1.618rem;
+  cursor: pointer;
+}
+.product-image .toggle-overlay:hover {
+  color: #f3f3f3;
+}
+.product-image .toggle-overlay:focus + .image-overlay {
+  display: flex;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rechter kolom met productinformatie */
 .product-info {
   height: 100%;
+  max-height: 100vh;
   width: 60%;
-  overflow-y: auto;
   background-color: #0a0a0a;
   color: rgb(243, 243, 243);
   font-family: "Red Hat Display", sans-serif;
   padding: 0 2rem;
+  overflow-y: scroll;
 }
 .product-info .info-heading {
   font-family: "Red Hat Display", sans-serif;
@@ -1164,72 +1209,12 @@
   list-style-type: none;
 }
 .product-info .fa-star {
-  color: #ea68a9;
+  color: rgb(243, 243, 243);
   font-size: 1rem;
   margin-right: 1px;
   border: none;
 }
 
-/* Rechterkolom met productafbeelding en overlay */
-.product-image {
-  width: 40%;
-  position: relative;
-}
-
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0px 1rem 0px 1rem;
-  background-color: rgba(243, 243, 243, 0.8);
-  backdrop-filter: blur(2rem);
-  display: none;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  font-size: 1.2rem;
-  text-align: start;
-  padding: 2rem;
-  overflow: scroll;
-}
-.image-overlay .overlaytxt_sm {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 1.618rem;
-  font-weight: 400;
-  color: #363636;
-  margin-bottom: 2rem;
-}
-
-.toggle-overlay {
-  position: absolute;
-  color: rgba(243, 243, 243, 0.75);
-  top: 1rem;
-  right: 1rem;
-  text-decoration: none;
-  font-size: 1.618rem;
-  cursor: pointer;
-}
-
-/* Toon overlay wanneer de link wordt aangeklikt */
-.toggle-overlay:focus + .image-overlay {
-  display: flex;
-}
-
-/* Stijlen voor scrollbare productinformatie */
-.product-info {
-  max-height: 100vh;
-  overflow-y: scroll;
-}
-
-/* Stijlen voor de CTA-knop (Call to Action) */
 .cart-button {
   display: inline-block;
   font-family: "Red Hat Display", sans-serif;
@@ -1274,11 +1259,21 @@
 .tech-specs .specs-wrapper .product-info-list i {
   width: 40px;
   margin-right: 1.2rem;
-  color: #ea68a9;
+  color: rgb(243, 243, 243);
 }
 
 /* MEDIA QUERIES. */
 @media (min-width: 320px) and (max-width: 768px) {
+  .product-image .image-overlay {
+    border-radius: 0 0.5rem;
+  }
+  .product-image .image-overlay .overlaytxt_sm {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #363636;
+    margin-bottom: 1rem;
+  }
   .product-info {
     margin-top: 2rem;
     width: 100%;
@@ -1304,7 +1299,6 @@
   .tech-specs .specs-wrapper .product-info-list i {
     width: 40px;
     margin-right: 0.8rem;
-    color: #ea68a9;
   }
 }
 
